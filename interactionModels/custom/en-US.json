@@ -323,79 +323,78 @@
           "values": [
             {
               "name": {
-                "value": "Bookstore"
+                "value": "Book"
               }
             },
             {
               "name": {
-                "value": "Department Store"
+                "value": "Departmental"
               }
             },
             {
               "name": {
-                "value": "Home Goods Store"
+                "value": "HomeGoods"
               }
             },
             {
               "name": {
-                "value": "Pet Store"
+                "value": "Pets"
               }
             },
             {
               "name": {
-                "value": "Furniture Store"
+                "value": "Furniture"
               }
             },
             {
               "name": {
-                "value": "Coffee Shop"
+                "value": "CoffeeShop"
               }
             },
             {
               "name": {
-                "value": "Jewellery Store"
+                "value": "Jewellery"
               }
             },
             {
               "name": {
-                "value": "Stationery Store"
+                "value": "Stationery"
               }
             },
             {
               "name": {
-                "value": "Grocery Store"
+                "value": "Grocery"
               }
             },
             {
               "name": {
-                "value": "Clothing Store"
+                "value": "Clothing"
               }
             },
             {
               "name": {
-                "value": "Video Game Store"
+                "value": "Videogames"
               }
             },
             {
               "name": {
-                "value": "Music Store"
+                "value": "Music"
               }
             },
             {
               "name": {
-                "value": "Flower Shop"
+                "value": "Flowers"
               }
             },
             {
               "name": {
-                "value": "Toy Store"
+                "value": "Toys"
               }
             },
             {
               "name": {
                 "value": "Pharmacy"
-              },
-              "id": "Pharmacy"
+              }
             },
             {
               "name": {
@@ -409,32 +408,32 @@
             },
             {
               "name": {
-                "value": "Sporting Goods Store"
+                "value": "Sportinggoods"
               }
             },
             {
               "name": {
-                "value": "Mobile Phone Store"
+                "value": "MobilePhone"
               }
             },
             {
               "name": {
-                "value": "Convenience Store"
+                "value": "ConvenienceStore"
               }
             },
             {
               "name": {
-                "value": "Gift Shop"
+                "value": "GiftShop"
               }
             },
             {
               "name": {
-                "value": "Electronics Store"
+                "value": "Electronics"
               }
             },
             {
               "name": {
-                "value": "Hardware Store"
+                "value": "Hardware"
               }
             },
             {
@@ -481,7 +480,7 @@
           "name": "storeLocation"
         }
       ],
-      "invocationName": "get project"
+      "invocationName": "get zodiac or store details"
     },
     "prompts": [
       {
