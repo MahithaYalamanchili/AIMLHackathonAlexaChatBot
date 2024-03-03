@@ -1,0 +1,547 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1321417825246.849696018854"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1321417825246.340435789603"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1321417825246.1628425919803"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "storeStatus",
+              "elicitationRequired": true,
+              "type": "storeStatus",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.609209804855.783477629959"
+              }
+            },
+            {
+              "name": "StoreType",
+              "elicitationRequired": true,
+              "type": "storeType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.609209804855.1177022471241"
+              }
+            },
+            {
+              "name": "StoreCity",
+              "elicitationRequired": true,
+              "type": "storeLocation",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.609209804855.653356884881"
+              }
+            }
+          ],
+          "name": "StoreIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": [
+            "Sorry we are didn\u0027t get you. Do need help with finding store or your zodiac sign."
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "{month} {year} ",
+                "{month}",
+                "i was born in {month}"
+              ]
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "i was born on {day}",
+                "i was born on {day} {month} {year}",
+                "{day} {month} {year}",
+                "{day} {month}",
+                "{day}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "zodiacs",
+            "What\u0027s the zodiac sign for {month} {day} {year}",
+            "Tell me the zodiac sign associated with {month} {day} {year}",
+            "I\u0027m curious about the zodiac sign for {month} {day} {year}",
+            "Determine the zodiac sign for {month} {day} {year}",
+            "What is the zodiac sign for {month} {day} {year} birthdays",
+            "I want to know the zodiac sign for {month} {day} {year}",
+            "What zodiac sign am I if I was born on {month} {day} {year}",
+            "Can you tell me the zodiac sign for {month} {day} {year} births",
+            "What zodiac sign corresponds to {month} {day} {year} birthdays",
+            "What\u0027s the zodiac sign for {month} {day} {year} born individuals",
+            "Determine the zodiac sign for a birthdate of {month} {day} {year}",
+            "Inform me about the zodiac sign associated with {month} {day} {year}",
+            "Can you tell me the zodiac sign for a person born on {month} {day} {year}",
+            "What zodiac sign does someone born on {month} {day} {year} have",
+            "If born on {month} {day} {year} what\u0027s the zodiac sign",
+            "I\u0027m curious to know the zodiac sign for {month} {day} {year}",
+            "I want to know the zodiac sign for {month} {day} {year} birthdates",
+            "Identify the zodiac sign for a person born on {month} {day} {year}",
+            "Tell me the zodiac sign for {month} {day} {year} born individuals",
+            "Can you tell me the zodiac sign for {month} {day} {year} birthdates",
+            "What zodiac sign am I if born on {month} {day} {year}",
+            "For a birthdate of {month} {day} {year}  what zodiac sign is it",
+            "If born on {month} {day} {year} what is their zodiac sign",
+            "I want to know the zodiac sign for {month} {day} {year} born individuals",
+            "Tell me the zodiac sign for {month} {day} {year} birthdates",
+            "What\u0027s the zodiac sign for someone born on {month} {day} {year}",
+            "Can you tell me the zodiac sign for {month} {day} {year} born individuals",
+            "What is the zodiac sign for {month} {day} {year} birthdates",
+            "Determine the zodiac sign for {month} {day} {year} born individuals",
+            "Identify the zodiac sign for {month} {day} {year} birthdates",
+            "Tell me the zodiac sign for those born on {month} {day} {year}",
+            "What zodiac sign for {month} {day} {year}",
+            "Tell me the zodiac sign for {month} {day} {year}",
+            "i need to know my zodiac sign i was born {day} {month}",
+            "can you please help with my zodiac sign",
+            "i was born in {month} what would be my zodiac sign",
+            "i need my zodiac sign",
+            "I want to know my zodiac sign what details you need",
+            "i was born on {day}  can you please tell me my zodiac sign",
+            "i was born on {day} {month} {year}  can you please tell me my zodiac sign",
+            "will you be able to tell my zodiac sign i was born in {month}",
+            "can you please help me with zodiac sign i was born on {day} {month} {year}",
+            "tell my zodiac sign",
+            "tell my zodiac sign if i was born on {day} {month} {year}",
+            "can you tell my zodiac sign",
+            "get my zodiac sign",
+            "what is my zodiac sign if my DOB is {day} {month} {year}",
+            "get my zodiac sign if i was born on {day}",
+            "get my zodiac sign if i was born in {year}",
+            "get my zodiac sign if  wa born in {month}",
+            "get my zodiac sign if in was born on {day} {month} {year}",
+            "Zodiac",
+            "zodiac Sign",
+            "What is my zodiac sign I was born on {month} {day} {year}",
+            "What is my zodiac sign",
+            "{year}",
+            "{month}",
+            "{day}",
+            "I was born on {month} {day} {year}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "storeStatus",
+              "type": "storeStatus",
+              "samples": [
+                "{storeStatus}"
+              ]
+            },
+            {
+              "name": "StoreType",
+              "type": "storeType",
+              "samples": [
+                "{StoreType}"
+              ]
+            },
+            {
+              "name": "StoreCity",
+              "type": "storeLocation",
+              "samples": [
+                "{StoreCity}"
+              ]
+            }
+          ],
+          "name": "StoreIntent",
+          "samples": [
+            "{StoreType} in {StoreCity} which are {storeStatus}",
+            "{storeStatus} {StoreType} in {StoreCity}",
+            "{StoreType} in {StoreCity}",
+            "{StoreType}",
+            "{StoreCity}",
+            "{storeStatus}",
+            "{storeStatus} stores",
+            "{StoreType} {storeStatus}",
+            "{StoreType} {StoreCity}",
+            "{storeStatus} {StoreCity}",
+            "{StoreCity} {storeStatus} {StoreType}",
+            "{StoreCity} {StoreType} {storeStatus}",
+            "{StoreType} {StoreCity} {storeStatus}",
+            "{storeStatus} {StoreType} {StoreCity}",
+            "get {storeStatus} {StoreType} {StoreCity}",
+            "{StoreCity} {storeStatus}",
+            "{storeStatus} {StoreType}",
+            "{StoreCity} {StoreType}",
+            "{StoreType} {storeStatus} {StoreCity}",
+            "{storeStatus} {StoreCity}  {StoreType}",
+            "{storeStatus} {StoreType} store in {StoreCity}",
+            "{StoreType} store",
+            "stores in {StoreCity}",
+            "stores",
+            "store",
+            "can you find a {StoreType} {storeStatus} now",
+            "can you find a store in {StoreCity}",
+            "Can you suggest a {storeStatus} {StoreType} store in {StoreCity}",
+            "I\u0027m interested in discovering a {storeStatus} {StoreType} store within {StoreCity} Any recommendations",
+            "What\u0027s a good {storeStatus} {StoreType} store I can explore in {StoreCity}",
+            "Any ideas for a {storeStatus} {StoreType} store to visit in {StoreCity}",
+            "Looking for suggestions on a {storeStatus} {StoreType} store available in {StoreCity}",
+            "Can you recommend a {storeStatus} {StoreType} store nearby in {StoreCity}",
+            "I\u0027m seeking recommendations for a {storeStatus} {StoreType} store within {StoreCity} Any thoughts",
+            "Interested in finding a {storeStatus} {StoreType} store to check out in {StoreCity} Any suggestions",
+            "What\u0027s a popular {storeStatus} {StoreType} store in {StoreCity} that you\u0027d recommend",
+            "Could you suggest a {storeStatus} {StoreType} store I should visit in {StoreCity}",
+            "Seeking recommendations for a {storeStatus} {StoreType} store to explore in {StoreCity}",
+            "Any top picks for a {storeStatus} {StoreType} store in {StoreCity}",
+            "I\u0027m on the lookout for a {storeStatus} {StoreType} store in {StoreCity} Any recommendations",
+            "Can you recommend a {storeStatus} {StoreType} store that\u0027s worth checking out in {StoreCity}",
+            "Looking for suggestions on a {storeStatus} {StoreType} store to discover in {StoreCity}",
+            "I\u0027m intrigued to find a {storeStatus} {StoreType} store available in {StoreCity} Any ideas",
+            "Any recommendations for a {storeStatus} {StoreType} store to explore in {StoreCity}",
+            "What\u0027s a must-visit {storeStatus} {StoreType} store in {StoreCity} that you\u0027d suggest",
+            "Could you suggest a {storeStatus} {StoreType} store that\u0027s popular in {StoreCity}",
+            "I\u0027m looking for a {storeStatus} {StoreType} store to visit in {StoreCity} Any recommendations",
+            "Any suggestions for a {storeStatus} {StoreType} store that\u0027s open in {StoreCity}",
+            "Seeking recommendations for a {storeStatus} {StoreType} store to check out in {StoreCity}",
+            "Can you recommend a {storeStatus} {StoreType} store nearby within {StoreCity}",
+            "What\u0027s a good {storeStatus} {StoreType} store I can find in {StoreCity}",
+            "Any ideas for a {storeStatus} {StoreType} store to explore in {StoreCity}",
+            "Looking for suggestions on a {storeStatus} {StoreType} store available nearby in {StoreCity}",
+            "I\u0027m intrigued to find a {storeStatus} {StoreType} store within {StoreCity} Any suggestions",
+            "Any recommendations for a {storeStatus} {StoreType} store to visit in {StoreCity}",
+            "What\u0027s a must-see {storeStatus} {StoreType} store in {StoreCity} that you\u0027d suggest",
+            "Could you suggest a {storeStatus} {StoreType} store that\u0027s worth checking out in {StoreCity}",
+            "Seeking recommendations for a {storeStatus} {StoreType} store that\u0027s open in {StoreCity}",
+            "Can you recommend a {storeStatus} {StoreType} store I should explore in {StoreCity}",
+            "What\u0027s a popular {storeStatus} {StoreType} store available in {StoreCity}",
+            "Wondering if you could suggest a {storeStatus} {StoreType} store in {StoreCity}",
+            "Exploring options for a {storeStatus} {StoreType} store within {StoreCity} Any thoughts",
+            "Hoping to discover a {storeStatus} {StoreType} store within {StoreCity} Any recommendations",
+            "Need a recommendation for a {storeStatus} {StoreType} store in {StoreCity} Any ideas",
+            "Looking forward to finding a {storeStatus} {StoreType} store in {StoreCity} Any suggestions",
+            "Seeking a suggestion for a {storeStatus} {StoreType} store within {StoreCity} Can you assist",
+            "Seeking guidance on a {storeStatus} {StoreType} store within {StoreCity} Any ideas",
+            "Hoping to stumble upon a {storeStatus} {StoreType} store within {StoreCity} Any suggestions",
+            "Interested in finding a {storeStatus} {StoreType} store within {StoreCity} Any recommendations",
+            "Seeking suggestions for a {storeStatus} {StoreType} store in {StoreCity} Can you help",
+            "Curious to explore a {storeStatus} {StoreType} store available in {StoreCity} Any ideas",
+            "Looking for a recommendation for a {storeStatus} {StoreType} store in {StoreCity}",
+            "I\u0027m in search of a {storeStatus} {StoreType} store within {StoreCity} Any recommendations",
+            "Wondering if you have any recommendations for a {storeStatus} {StoreType} store in {StoreCity}",
+            "Exploring options for a {storeStatus} {StoreType} store within {StoreCity} Any suggestions",
+            "Hoping to discover a {storeStatus} {StoreType} store within {StoreCity} Can you assist",
+            "In need of a recommendation for a {storeStatus} {StoreType} store in {StoreCity} Any thoughts",
+            "Looking forward to finding a {storeStatus} {StoreType} store in {StoreCity} Any recommendations",
+            "Seeking a suggestion for a {storeStatus} {StoreType} store within {StoreCity} Can you help me out",
+            "Seeking guidance on a {storeStatus} {StoreType} store within {StoreCity} Any suggestions",
+            "Hoping to stumble upon a {storeStatus} {StoreType} store within {StoreCity} Any thoughts",
+            "Looking for a recommendation for a {storeStatus} {StoreType} store within {StoreCity}",
+            "Curious if you have any recommendations for a {storeStatus} {StoreType} store in {StoreCity}",
+            "In search of a {storeStatus} {StoreType} store within {StoreCity} Any suggestions"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Closed"
+              },
+              "id": "Closed"
+            },
+            {
+              "name": {
+                "value": "Open"
+              },
+              "id": "Open"
+            }
+          ],
+          "name": "storeStatus"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Bookstore"
+              }
+            },
+            {
+              "name": {
+                "value": "Department Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Home Goods Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Pet Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Furniture Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Coffee Shop"
+              }
+            },
+            {
+              "name": {
+                "value": "Jewellery Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Stationery Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Grocery Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Clothing Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Video Game Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Music Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Flower Shop"
+              }
+            },
+            {
+              "name": {
+                "value": "Toy Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Pharmacy"
+              },
+              "id": "Pharmacy"
+            },
+            {
+              "name": {
+                "value": "Supermarket"
+              }
+            },
+            {
+              "name": {
+                "value": "Bakery"
+              }
+            },
+            {
+              "name": {
+                "value": "Sporting Goods Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Mobile Phone Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Convenience Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Gift Shop"
+              }
+            },
+            {
+              "name": {
+                "value": "Electronics Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Hardware Store"
+              }
+            },
+            {
+              "name": {
+                "value": "Restaurant"
+              }
+            }
+          ],
+          "name": "storeType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Mumbai"
+              }
+            },
+            {
+              "name": {
+                "value": "Delhi"
+              }
+            },
+            {
+              "name": {
+                "value": "Hyderabad"
+              }
+            },
+            {
+              "name": {
+                "value": "Chennai"
+              }
+            },
+            {
+              "name": {
+                "value": "Bangalore"
+              }
+            },
+            {
+              "name": {
+                "value": "Kolkata"
+              }
+            }
+          ],
+          "name": "storeLocation"
+        }
+      ],
+      "invocationName": "get project"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what  day you were born  like I was on seventh"
+          },
+          {
+            "type": "PlainText",
+            "value": "What day were you born"
+          }
+        ],
+        "id": "Elicit.Slot.1321417825246.340435789603"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what month you were born like i was born in october"
+          }
+        ],
+        "id": "Elicit.Slot.1321417825246.849696018854"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What year were you born"
+          }
+        ],
+        "id": "Elicit.Slot.1321417825246.1628425919803"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What should be the status of the store Open or Closed ?"
+          }
+        ],
+        "id": "Elicit.Slot.609209804855.783477629959"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the type of the Store?"
+          }
+        ],
+        "id": "Elicit.Slot.609209804855.1177022471241"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What city is the store located in ?"
+          }
+        ],
+        "id": "Elicit.Slot.609209804855.653356884881"
+      }
+    ]
+  }
+}
